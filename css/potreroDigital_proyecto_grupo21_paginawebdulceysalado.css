@@ -11,10 +11,6 @@ body{
     font-family:helvetica;
     text-decoration:underline;
 
-
-}
-
-
 header{
     flex-direction: row;
     background-color:grey;
@@ -34,7 +30,6 @@ header{
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-
 }
 .Logo{
     background-color:grey;
@@ -44,7 +39,6 @@ header{
     text-align:center;
     display: flex;
       border-top:10px solid black;
-
 }
 nav{
     width: 80%;
@@ -52,19 +46,16 @@ nav{
     height: 25vh;
     display: flex;
     justify-content: flex-end;
-
-
 }
-
 .pestaña{
   color:white;
   text-align:center;
-  font-size: 80%;
+  font-size: 50%;
   display: flex;
-  width: 40%;
-  height: 20%;
-  margin: 2% 2%;
-  justify-content:flex-end;
+  width: 80%;
+  height: 50%;
+  margin: 2% 1%;
+  justify-content:center;
 }
 img{
   width: 25%;
@@ -72,30 +63,60 @@ img{
   display: block;
    line-height: 1;
 }
-
 main{
     width: 80%;
     display: flex;
     height: 20vh;
      min-height: 80px;
     flex-direction:row;
-
 }
-
-
 footer{
     background-color: grey;
-    height: 250px;
+    height: 450px;
     border-top:10px solid black;
     display: flex;
     text-align: left;
     font-size: 30px;
       flex-wrap: wrap;
 }
+.social {
+position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+right:0; /* Establecemos la barra en la izquierda */
+top: 260px; /* Bajamos la barra 200px de arriba a abajo */
+z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+.social ul {
+list-style: none;
+}
+.social ul li a {
+display: block;
+color:#fff;
+background: #000;
+  text-align:center;
+  font-style: oblique;
+  font-size: 40%;
+padding: 0px 0px;
+text-decoration: none;
+-webkit-transition:all 500ms ease;
+-o-transition:all 500ms ease;
+transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-instagram {background: #00abf0;}
+.social ul li .icon-googleplus {background: #d95232;}
+.social ul li .icon-whatsapp {background-color:#25d366}
+.social ul li .icon-mail {background: #000000;}
+
+.social ul li a:hover {
+background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+padding: 0px 10px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
 p{
   font-style: oblique;
   text-align: left;
   font-size: 30%;
+  color: white;
 }
 
 @media (min-width: 1024px){
@@ -108,15 +129,9 @@ p{
   img{
     width: 0%;
     height: 60vh;
-
-
   }
-
-  .container{
-
-      border-top:10px solid black;
-
-
+.container{
+  border-top:10px solid black;
   }
   .carousel{
     width: 80%;
@@ -126,8 +141,6 @@ p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-
   }
   main{
       width: 80%;
@@ -136,18 +149,14 @@ p{
        min-height: 80px;
       flex-direction:row;
     }
-
-
-    .Logo{
-
+  .Logo{
       background-color:grey;
       font-size: 20px;
       width: 40%;
       height: 25vh;
       text-align:center;
       display: flex;
-        border-top:10px solid black;
-
+      border-top:10px solid black;
     }
     nav{
         background-color:grey;
@@ -158,7 +167,6 @@ p{
         justify-content: center;
     }
     .pestaña{
-
         color:white;
         text-align:center;
         font-size: 80%;
@@ -166,23 +174,59 @@ p{
         width: 30%;
         height: 50%;
         margin: 4% 8%;
-        justify-content: space-around;
+        position:absolute;
+        top:3px;
+        right:-30px;
     }
 
     footer{
         background-color: grey;
-        height: 180px;
+        height: 460px;
         border-top:10px solid black;
         display: flex;
         text-align:left;
-        font-size: 25px;
+        font-size: 20px;
       }
-
+      .social {
+    position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+    right:0; /* Establecemos la barra en la izquierda */
+    top: 230px; /* Bajamos la barra 200px de arriba a abajo */
+    z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+    }
+    .social ul {
+    list-style: none;
+    }
+    .social ul li a {
+    display:block;
+    color:#fff;
+    text-align: center;
+    font-style: oblique;
+    font-size: 65%;
+    background: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    -webkit-transition:all 500ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+    }
+    .social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+    .social ul li .icon-instagram {background: #00abf0;}
+    .social ul li .icon-googleplus {background: #d95232;}
+    .social ul li .icon-mail {background: #666666;}
+    .social ul li .icon-whatsapp {background-color:#25d366}
+    .social ul li a:hover {
+    background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+    padding: 10px 40px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+    }
       p{
-        font-style:Sans-serif;
-        text-align:center;
+        font-style:oblique;
+        text-align:left;
 
-        font-size: 70%;
+        font-size: 80%;
         color:white;
-
+      }
+      h3{
+        font-size:100%;
+        font-style: oblique;
+        text-decoration:underline;
       }
